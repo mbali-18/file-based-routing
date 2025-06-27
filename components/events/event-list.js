@@ -1,7 +1,8 @@
 import EventItem from "./event-item";
 import classes from "./event-list.module.css";
+
 function EventList(props) {
-  const { items } = props;
+  const items = Array.isArray(props.items) ? props.items : [];
   return (
     <ul className={classes.list}>
       {items.map((event) => (
